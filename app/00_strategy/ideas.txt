@@ -1,0 +1,24 @@
+4 main routes
+
+Home
+- Photos from people the user follows
+- Photos with user and comments. And a like button... It should be a integer col
+- Displayed as list, scrollable index, not show
+
+Explore
+- Has a search bar
+- Displays only photos, randomized, posted by anybody
+- All the photos are links for the show of a post
+
+Profile
+- Profile picture, followers, posts
+- Has the button for editing profile
+- Displays user photo grid as links, just like explore
+
+____
+
+Follower list
+- Photo, name, unfollow button
+
+Any show route
+- Should have a button for returning to the LAST page, which should be a photo index
