@@ -11,6 +11,14 @@
   width: 40px;
 }
 
+.navbar-position{
+  position: fixed;
+  bottom:0vh;
+  left: 0vh;
+  width: 100vw;
+}
+
 body{
-  margin-bottom: 10vh;
+  width: 100vw;
+  height: max-content;
 }
