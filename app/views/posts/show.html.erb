@@ -30,5 +30,8 @@
   <%= @post.description %>
 </p>
 
+<td><%= cl_image_tag @post.photo.key %></td>
+
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
