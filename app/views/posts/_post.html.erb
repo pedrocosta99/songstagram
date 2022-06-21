@@ -1,12 +1,38 @@
-<tr>
-  <td><%= post.user_id %></td>
-  <td><%= post.artist %></td>
-  <td><%= post.album %></td>
-  <td><%= post.song %></td>
-  <td><%= post.title %></td>
-  <td><%= post.description %></td>
-  <td><%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fit %></td>
-  <td><%= link_to 'Show', post %></td>
-  <td><%= link_to 'Edit', edit_post_path(post) %></td>
-  <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
+<div class="post d-flex flex-column">
+  <div class="post-header d-flex flex-row">
+    <div class="mx-3">
+      Here, an avatar
+    </div>
+    |||
+    <%= post.user.name %>
+  </div>
+  <div class="post-img">
+    <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fit %>
+  </div>
+  <div class="info bg-dark text-light">
+    <h4>
+    Artist: <%= post.artist %>
+    </h4>
+    <h4>
+    Album: <%= post.album %>
+    </h4>
+    <h4>
+    Song: <%= post.song %>
+    </h4>
+  </div>
+  <div class="review">
+    <strong>
+    <%= post.title %>
+    </strong>
+    <%= post.description %>
+  </div>
+  <div class="comments">
+    Comments will come later
+  </div>
+</div>
+
+
+
+  <%# <td><%= link_to 'Show', post %></td> %>
+  <%# <td><%= link_to 'Edit', edit_post_path(post) %></td> %>
+  <%# <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> %>
