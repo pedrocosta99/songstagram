@@ -2,7 +2,7 @@
 
   <div class="post-header d-flex flex-row">
     <div class="mx-3">
-      Here, an avatar
+      <img src="https://res.cloudinary.com/ddz4cg7lj/image/upload/v1654218808/wagon_ydvmwg.jpg" alt="" class="avatar">
     </div>
     |||
     <%= post.user.name %>
@@ -10,7 +10,7 @@
 
   <div class="post-img">
     <% if post.photo.key %>
-      <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fit %>
+      <%= cl_image_tag post.photo.key, crop: :fit, class: "post-img" %>
     <% end %>
   </div>
 
