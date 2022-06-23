@@ -1,4 +1,5 @@
 <div class="post d-flex flex-column">
+
   <div class="post-header d-flex flex-row">
     <div class="mx-3">
       Here, an avatar
@@ -6,11 +7,13 @@
     |||
     <%= post.user.name %>
   </div>
+
   <div class="post-img">
     <% if post.photo.key %>
       <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fit %>
     <% end %>
   </div>
+
   <div class="info bg-dark text-light">
     <h4>
     Artist: <%= post.artist %>
@@ -22,12 +25,14 @@
     Song: <%= post.song %>
     </h4>
   </div>
+
   <div class="review">
     <strong>
     <%= post.title %>
     </strong>
     <%= post.description %>
   </div>
+
   <div class="comments">
     Comments will come later
   </div>
