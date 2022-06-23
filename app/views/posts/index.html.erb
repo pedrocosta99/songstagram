@@ -2,13 +2,9 @@
 
 <h2 class="text-center bg-dark text-light m-0">Songstagram</h2>
 
-<table>
-  <tbody>
-    <% @posts.each do |post| %>
-      <%= render 'post', post: post %>
-    <% end %>
-  </tbody>
-</table>
+<% @posts.each do |post| %>
+  <%= render 'post', post: post %>
+<% end %>
 
 <br>
 

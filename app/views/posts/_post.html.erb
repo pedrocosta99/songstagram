@@ -7,7 +7,9 @@
     <%= post.user.name %>
   </div>
   <div class="post-img">
-    <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fit %>
+    <% if post.photo.key %>
+      <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fit %>
+    <% end %>
   </div>
   <div class="info bg-dark text-light">
     <h4>
