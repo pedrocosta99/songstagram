@@ -1,36 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= User.find(@post.user_id).name %>
-</p>
+<%= render 'post', post: @post %>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @post.artist %>
-</p>
-
-<p>
-  <strong>Album:</strong>
-  <%= @post.album %>
-</p>
-
-<p>
-  <strong>Song:</strong>
-  <%= @post.song %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<td><%= cl_image_tag @post.photo.key %></td>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
