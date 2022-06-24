@@ -1,11 +1,12 @@
 <div class="post d-flex flex-column">
 
   <div class="post-header d-flex flex-row">
-    <div class="mx-3">
-      <img src="https://res.cloudinary.com/ddz4cg7lj/image/upload/v1654218808/wagon_ydvmwg.jpg" alt="" class="avatar">
+    <div class="mx-3 my-2 d-flex flex-row">
+      <%= cl_image_tag post.user.avatar.key, class: "avatar" %>
+      <strong class="mx-3">
+        <%= post.user.name %>
+      </strong>
     </div>
-    |||
-    <%= post.user.name %>
   </div>
 
   <div class="post-img">
@@ -14,26 +15,20 @@
     <% end %>
   </div>
 
-  <div class="info bg-dark text-light">
-    <h4>
-    Artist: <%= post.artist %>
-    </h4>
-    <h4>
-    Album: <%= post.album %>
-    </h4>
-    <h4>
-    Song: <%= post.song %>
-    </h4>
-  </div>
+  <div class="review my-3">
 
-  <div class="review">
+    <div class="d-flex flex-row justify-content-around mx-3">
+      <i class="fas fa-heart"></i>
+      <i class="fas fa-eye"></i>
+    </div>
+
     <strong>
-    <%= post.title %>
+    <%= post.user.name %>
     </strong>
     <%= post.description %>
   </div>
 
-  <div class="comments">
+  <div class="comments mx-3">
     Comments will come later
   </div>
 </div>
