@@ -18,7 +18,24 @@
   <div class="review my-3">
 
     <div class="d-flex flex-row justify-content-around mx-3">
-      <i class="fas fa-heart"></i>
+      <%# LIKE BUTTON %>
+      <%= post.likes.count %> Likes
+      <% like = current_user.likes.find_by(post:post) %>
+      <% if like.nil? %>
+        <%= button_to likes_path, params: {like: {post_id: post.id}}, class: "btn-like", method: :post do %>
+          <i class="fas fa-heart"></i>
+        <% end %>
+      <% else %>
+        <%# <%= button_to "Unlike", likes_path(like), method: :delete %>
+        <form action="<%= like_path(like) %>" method="post">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn-like">
+            <i class="fas fa-heart red-heart"></i>
+          </button>
+          <%# <input type="submit" value="Unlike"> %>
+        </form>
+      <% end %>
       <i class="fas fa-eye"></i>
     </div>
 
